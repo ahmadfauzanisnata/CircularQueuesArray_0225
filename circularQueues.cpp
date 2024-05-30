@@ -42,6 +42,8 @@ class Queues {
 
     } 
 
+
+
     void remove() {
         // cek apakah antrian kosong
         if (FRONT == -1) {
@@ -74,6 +76,16 @@ class Queues {
         if (FRONT_position == -1) {
             cout << "Queue is empty\n";
             return;
+        }
+        cout << "\nElements in the queue are...\n";
+
+        //jika front <= rear, iterasi dari front hingga rear
+        if (FRONT_position <= REAR_position) {
+            while (FRONT_position <= REAR_position){
+                cout << queue_array[FRONT_position] << " ";
+                FRONT_position++;
+            }
+            cout << endl;
         }
 
     }
